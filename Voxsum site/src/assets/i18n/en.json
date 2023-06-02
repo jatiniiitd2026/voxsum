@@ -1,0 +1,194 @@
+{
+    "COMMON": {
+        "LANG": "en",
+        "HEADER": {
+            "LOGO": "assets/images/logo.png",
+            "UPLOAD_BTN_TEXT": "UPLOAD RECEIPT",
+            "LANGUAGE": "Language",
+            "MENU_LOGGED": {
+                "HOME": "Home",
+                "HOW_IT_WORKS": "How it Works",
+                "REGISTER": "Register",
+                "LOGIN": "Login",
+                "LOGOUT": "Logout",
+                "UPLOAD-RECEIPT": "upload",
+                "FAQ": "Faq",
+                "SUPPORT": "SUPPORT"
+            }
+        },
+        "FOOTER": {
+            "COPYRIGHT": "",
+            "LINKS": {
+                "PRIVACY": " Privacy |",
+                "CA_PRIVACY": " CA PRIVACY |",
+                "OTNC": " Offer Terms & Conditions |",
+                "TNC": " Terms and Conditions"
+            }
+        }
+    },
+    "PAGES": {
+        "LANDING": {
+            "HOW_TO_PARTICIPATE": {
+                "HEADING": "How It Works",
+                "STEP_1": {
+                    "TITLE": "1. Extension Initialization and Audio Recording",
+                    "DESCRIPTION": "When the user initiates the chrome extension during a business or educational online meeting, the extension gains access to the audio input from the meeting platform and starts recording the speech."
+                },
+                "STEP_2": {
+                    "TITLE": "2. Speech-to-Text Conversion",
+                    "DESCRIPTION": "The recorded speech is passed through a speech-to-text conversion module that utilizes NLP techniques. This module converts the audio into text format, making it suitable for further processing."
+                },
+                "STEP_3": {
+                    "TITLE": "3. Summary Generation with ChatGPT Model",
+                    "DESCRIPTION": "The text data obtained from the speech-to-text conversion is fed into the ChatGPT model, which utilizes natural language processing and deep learning techniques. The ChatGPT model comprehends the content and generates a summary based on the input text."
+                },
+                "STEP_4": {
+                    "TITLE": "4. Information Extraction and Insights",
+                    "DESCRIPTION": "The generated summary is processed to extract key information and relevant insights from the summarized text. This step helps to identify the most important points and highlights essential details for further analysis."
+                },
+                "STEP_5": {
+                    "TITLE": "5. Visualization of Extracted Information",
+                    "DESCRIPTION": "The extracted information is visualized using suitable graphical representations such as pie charts or other visualization techniques. These visualizations provide a clear and concise representation of the summarized content, making it easier for the user to comprehend the key insights."
+                },
+                "STEP_6": {
+                    "TITLE": "6. Presentation and Optional Features",
+                    "DESCRIPTION": "The chrome extension presents the summary and visualizations to the user within the browser interface. Additionally, the extension may offer optional features such as search functionality within the summary, keyword highlighting, or customization options for the visualizations. These features enhance the user experience and allow for further exploration and interaction with the summarized content."
+                }
+            },
+            "FAQ": [
+                {
+                    "QUESTION": "ABX?",
+                    "ANSWER": "All products must be purchased between upload your context."
+                },
+                {
+                    "QUESTION": "What do I do if I am having trouble participating in the program?",
+                    "ANSWER": "You can submit any questions you may have about the promotion to our <a href='/home#support'>support box."
+                },
+                {
+                    "QUESTION": "All products must be purchased between upload your context.",
+                    "ANSWER": "m oz.</li><li>Maximum Strength* MUCINEX® FAST-MAX® Severe Congestioz.</li><li>MUCINEX® Fast Max Liquid Cold & Flu Arctic Burst & MUCINEX® Nightshift Arctic Burst 2x6 oz.</li><li>MUCINEX® FAST-MAX® Adult Caplets - Severe Congestion & Cough 20 ct.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Cold & Flu - Arctic Burst 6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Cold & Flu 6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Cold & Flu 9 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Cold & Flu Orange & Pineapple 6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Cold, Flu, & Sore Throat 6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Cold, Flu, & Sore Throat 9 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Congestion & Headache 6 oz</li><li>MUCINEX® FAST-MAX® Adult Liquid - Day Night Cold & Flu 2x6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Nighttime Cold & Flu 6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Nighttime Cold & Flu 6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Nighttime Severe Cold & Flu 6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Nighttime Severe Cold & Flu 6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Severe Congestion & Cough - Arctic Burst 6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Severe Congestion & Cough 6 oz.</li><li>MUCINEX® FAST-MAX® Adult Liquid - Severe Congestion & Cough 9 oz.</li><li>MUCINEX® FAST-MAX® Caplets - Cold & Flu 20 ct.</li><li>MUCINEX® FAST-MAX® Caplets - Cold & Flu 20 ct.</li><li>MUCINEX® FAST-MAX® Caplets - Cold, Flu & Sore Throat 20 ct.</li><li>MUCINEX® FAST-MAX® Caplets - Cold, Flu & Sore Throat 20 ct.</li><li>MUCINEX® FAST-MAX® Caplets - Congestion & Headache 20 ct.</li><li>MUCINEX® FAST-MAX® Caplets - Day Night Severe Congestion & Cough/Cold & Flu 40 ct.</li><li>MUCINEX® FAST-MAX® Caplets - Day Night Severe Congestion & Cough/Cold & Flu 30 ct.</li><li>MUCINEX® FAST-MAX® Caplets - Day Night Severe Congestion & Cough/Cold & Flu 40 ct.</li><li>MUCINEX® FAST-MAX® Caplets - Severe Congestion & Cough 20 ct.</li><li>MUCINEX® FAST-MAX® Caplets - Severe Congestion & Cough 20 ct.</li><li>MUCINEX® FAST-MAX® Day Cold & Flu & Nightshift® Night Severe Cold & Flu  Caplets - 20 ct.</li><li>MUCINEX® FAST-MAX® Day Cold & Flu & Nightshift® Night Severe Cold & Flu  Caplets - 40 ct.</li><li>MUCINEX® FAST-MAX® Day Severe Congestion & Cough & Nightshift® Night Cold & Flu Caplets - 40 ct.</li><li>MUCINEX® FAST-MAX® DM Adult Liquid - 6 oz.</li><li>MUCINEX® FAST-MAX® DM Max Adult Liquid - Honey & Berry 6 oz.</li><li>MUCINEX® FAST-MAX® Liquid Gels - Cold & Flu 16 ct.</li><li>MUCINEX® FAST-MAX® Liquid Gels - Cold, Flu & Sore Throat 16 ct.</li><li>MUCINEX® FAST-MAX® Liquid Gels - Congestion & Headache 16 ct.</li><li>MUCINEX® FAST-MAX® Liquid Gels - Day Night 3x24 ct.</li><li>MUCINEX® FAST-MAX® Liquid Gels - Day Night Cold & Flu 24 ct.</li><li>MUCINEX® FAST-MAX® SE Chest Congestion Liquid - Honey & Berry 6 oz.</li><li>MUCINEX® Nightshift® Cold & Flu - Caplets - 20 ct.</li><li>MUCINEX® Nightshift® Cold & Flu - Clear & Cool 6 oz.</li><li>MUCINEX® Nightshift® Cold & Flu 6 oz.</li><li>MUCINEX® Nightshift® Cold & Flu 9 oz.</li><li>MUCINEX® Nightshift® Severe Cold & Flu - Arctic Burst 6 oz.</li><li>MUCINEX® Nightshift® Severe Cold & Flu - Caplets - 20 ct.</li></ul><br> Offer does not apply to: any Mucinex caplet or liquid gel products in 10 count (or smaller) packages; any Mucinex 12hr products; any Mucinex D products; any Mucinex Sinus-Max products; any Mucinex Children's products; any Mucinex FreeFrom FreeForm  products; or any Mucinex InstaSoothe products."
+                },
+                {
+                    "QUESTION": "How many times can I submit the same valid receipt?",
+                    "ANSWER": "You can only submit a valid receipt once, receipts submitted more than once will be rejected."
+                },
+                {
+                    "QUESTION": "How many rewards can I get?",
+                    "ANSWER": "All products must be purchased between upload your context."
+                },
+                {
+                    "QUESTION": "All products must be purchased between upload your context.",
+                    "ANSWER": "All products must be purchased between upload your context."
+                }
+            ],
+            "SUPPORT": {
+                "HEADING": "Support",
+                "NAME": "Name<sup>*</sup>",
+                "EMAIL": "Email Address<sup>*</sup>",
+                "MESSAGE": "Message<sup>*</sup>",
+                "MESSAGE": "Message<sup>*</sup>",
+                "BUTTON": "SUBMIT"
+            }
+        },
+        "EOP": {
+            "TITLE": "Sorry!",
+            "INFO": "The promotion has ended."
+        },
+        "CSP": {
+            "TITLE": "Coming Soon!",
+            "INFO": "Check back on January 15, 2022, for more details."
+        },
+        "REGISTRATION": {
+            "HEADING": "REGISTER",
+            "FIRSTNAME": "First Name<sup>*</sup>",
+            "LASTNAME": "Last Name<sup>*</sup>",
+            "EMAIL": "Email<sup>*</sup>",
+            "CONFIRMEMAIL": "Confirm Email<sup>*</sup>",
+            "PHONENUMBER": "Phone Number<sup>*</sup>",
+            "PURCHASEFROM": "Where did you purchase from?<sup>*</sup>",
+            "PROMOTION": "Where did you learn about the promotion?<sup>*</sup>",
+            "OPTIN": "<b>Offer Terms, P&G Terms and P&G Privacy Policy:</b> I have read and agree to the <a href='https://p3-custom-client.s3.us-west-2.amazonaws.com/olay-holiday-rewards/legal.pdfhttps://p3-custom-client.s3.amazonaws.com/olay-consumer-rewards-2021/olay_program_offer_terms_and_conditions.pdf' target='_blank'> <i><b>Offer Terms and Conditions</b> </i> </a> ,<a href='https://termsandconditions.pg.com/en-us/' target='_blank'> <i><b>P&G Terms and Conditions</b></i> </a> and <a href='https://privacypolicy.pg.com/en/' target='_blank'> <i><b>Privacy Policy.</b></i> </a>",
+            "ISAGREE": "<b>By registering,</b> I agree to the <a href='https://p3-custom-client.s3.us-west-2.amazonaws.com/reckit_mucinex/Mucinex-Fast-Max-GWP.pdf' target='_blank'> <i><b>Terms and Conditions</b></i> </a> and <a href='https://www.mucinex.com/pages/privacy-policy' target='_blank'> <i><b>Privacy Policy.</b></i> </a> <sup class='text-asterisk-color'>*</sup>",
+            "SUBMIT": "SUBMIT",
+            "ALREADY_LOGIN": "Already a member? Log in here"
+        },
+        "LOGIN": {
+            "WELCOME": "WELCOME",
+            "EMAIL": "Email<sup>*</sup>",
+            "PASS": "Password<sup>*</sup>",
+            "BTN_TEXT": "Sign In",
+            "ALREADY": "Already registered but forgot your password? Click here",
+            "LOGIN": "Already a Member? Login?",
+            "REQUIRED": "*Required fields",
+            "FORGOT": "Forgot Password",
+            "REGISTER": "Not registered yet? Click here"
+        },
+        "UPLOAD": {
+            "TITLE": "Upload Your Receipt",
+            "DESCRIPTION": "Take a clear picture of your entire receipt. The receipt must include the name and date of purchase on the photo.",
+            "NOTE": "<span>Note: Size of the receipt must be less than 5 MB.</span>",
+            "INSTRUCTION": "Click on the box below to upload your receipt. One image will be accepted in JPG, PNG, or PDF format per entry.",
+            "UPLOAD_TEXT": "Click here to upload receipt.<br />Please select one image.<br />JPG, PNG, or PDF are accepted.",
+            "BUTTON": "SUBMIT"
+        },
+        "FORGOT_PASSWORD": {
+           "TITLE": "Forgot Password",
+            "FORM": {
+                "YOUR_EMAIL": "Your Email"
+            }
+        },
+        "RESET_PASSWORD": {
+            "TITLE" : "Reset Password",
+            "FORM": {
+                "PASSWORD": "Password",
+                "CONFIRM_PASSWORD": "Confirm Password",
+                "SUBMIT":"Submit"
+            }
+        }
+    },
+    "ERRORS": {
+        "REGISTER": {
+            "EMAIL_REQUIRED": "Email is required",
+            "EMAIL_PATTERN": "Please enter a valid email address",
+            "EMAIL_EXIST": "This email address is already registered",
+            "FIRST_REQUIRED": "First name is required",
+            "FIRST_PATTERN": "First name must not contain any numeric digit and special character except the hyphen (-)",
+            "FIRST_LENGTH": "First name must be less than 255 characters",
+            "LAST_REQUIRED": "Last name is required",
+            "LAST_PATTERN": "Last name must not contain any numeric digit and special character except the hyphen (-)",
+            "LAST_LENGTH": "Last name must be less than 255 characters",
+            "ISAGREE_REQUIRED": "Required",
+            "CAPTCHA_REQUIRED": "Please complete the recaptcha!"
+        },
+        "LOGIN": {
+            "EMAIL_REQUIRED": "Email is required",
+            "EMAIL_PATTERN": "Please enter a valid email address",
+            "EMAIL_PASS_REQUIRED": "Password is required"
+        },
+        "RESET": {
+            "OPASS_REQUIRED": "Password is required",
+            "OPASS_PATTERN": "Your password must be between 8 and 15 characters. It must contain at least one uppercase and one special character.",
+            "CPASS_REQUIRED": "Password is required",
+            "CPASS_PATTERN": "Your password must be between 8 and 15 characters. It must contain at least one uppercase and one special character."
+        },
+        "FORGOT": {
+            "EMAIL_LENGTH": "Email/Username must be less then 255 characters",
+            "EMAIL_REQUIRED": "This field is required"
+        },
+        "RESET_PASS": {
+            "INPUT_REQUIRED": "This field is required",
+            "INPUT_PATTERN": "Your password must be between 8 and 15 characters. It must contain at least one uppercase, one numeric digit and one special character.",
+            "CONFIRM_REQUIRED": "This field is required"
+        },
+        "SUPPORT": {
+            "FNAME_REQUIRED": "First Name is required",
+            "FNAME_LENGTH": "First Name must be less then 254 characters and greater then 1 character",
+            "LNAME_REQUIRED": "Last Name is required",
+            "LNAME_LENGTH": "Last Name must be less then 254 characters and greater then 1 character",
+            "EMAIL_REQUIRED": "Email is required",
+            "EMAIL_PATTERN": "Please enter a valid email address",
+            "MESSAGE_REQUIRED": "Message is required",
+            "MESSAGE_LENGTH": "Message must be less than 255 characters and greater then 1 character"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.header-logo {
+    @apply border-b-5;
+    @apply border-black-color;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+}
+
+.promo-info {
+    @apply text-primary-color;
+    @apply text-5xl;
+    @apply font-NeutraText-Bold;
+}

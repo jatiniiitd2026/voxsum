@@ -1,0 +1,21 @@
+<div mat-dialog-content>
+    <h1 class="my-5 text-center font-NeutraText-Bold"> Please Enter you Credentials</h1>
+    <form (ngSubmit)="onSubmit()" [formGroup]="accessForm" class="flex flex-col">
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input class="input-text" formControlName="userName" matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input [type]="hide ? 'password' : 'text'" class="input-text" formControlName="password" matInput
+                   type="password">
+            <button (click)="toggle($event)" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" mat-icon-button
+                    matSuffix>
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+            <p class="my-2 text-center text-red-600 font-NeutraText-RegularItalic" *ngIf="formInvalid">Please enter valid credentials</p>
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+</div>
+

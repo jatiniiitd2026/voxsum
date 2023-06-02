@@ -1,0 +1,190 @@
+header {
+    padding: 2rem 0;
+    height: 85px;
+    border-bottom: 5px solid #001538;
+
+    .header-height {
+        height: 90px;
+    }
+
+    .main-logo {
+        position: absolute;
+        left: -35px;
+        top: -35px;
+        max-width: 180px;
+        z-index: 99;
+    }
+
+    .client-logo {
+        position: absolute;
+        right: 70px;
+        top: 25px;
+        max-width: 160px;
+        z-index: 99;
+        color: #000000 !important;
+        font-size: 20px;
+        background: #f7ee25 !important;
+        padding: 3px 12px;
+    }
+
+    .w-100 {
+        width: 100%;
+    }
+
+    .mob-button {
+        width: 100%;
+        padding: 20px 15px;
+        border-bottom: 1px solid #00378b;
+    }
+
+    .navigation {
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+    }
+
+    .navigation-inner-container {
+        display: none;
+    }
+
+    .mega-link a:hover {
+        color: #F56D1F;
+    }
+
+    .upload-button {
+        padding: 20px 15px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .transform-flag {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .hamburger-button {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+
+    .navmenu-opacity {
+        opacity: 1;
+        z-index: 1;
+        transition: all 0.5s ease;
+        position: absolute;
+        top: 24.6rem;
+        left: 0;
+
+        .navigation-inner-container {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .hamburger-button {
+            display: none;
+        }
+        .transform-flag {
+            width: unset;
+            object-fit: unset;
+            transform: translateX(10px);
+        }
+        .navigation {
+            opacity: 1;
+            transform: translate(0);
+            height: unset;
+            width: unset;
+        }
+        .w-100 {
+            width: unset;
+        }
+        .mob-button {
+            width: unset;
+            padding: 0 15px;
+            border: none;
+        }
+        .sub {
+            & > div > a {
+                padding: 0 20px;
+                cursor: pointer;
+                border-bottom: unset;
+            }
+
+            & > div {
+                &:last-child > a {
+                    padding: 0 0 0 10px;
+                }
+            }
+        }
+        .sub-menu {
+            position: absolute;
+            line-height: 1;
+            top: 100px;
+            width: 240px;
+            right: 0;
+            display: block;
+            z-index: -1;
+            transform: translateY(-100%);
+            transition: all 0.4s 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+            opacity: 0;
+            visibility: hidden;
+            border-width: 1px 1px 0 1px;
+            border-color: #0a175b;
+
+            &:hover {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            a {
+                line-height: 1;
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(0.39, 0.58, 0.57, 1);
+            }
+        }
+        .mega-link {
+            & > a:hover + .sub-menu {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .client-logo {
+            position: absolute;
+            right: 10px;
+            z-index: 99;
+        }
+        .navigation-inner-container {
+            display: block;
+        }
+    }
+
+    //@media screen and (max-width: 380px){
+    //    .main-logo {
+    //        top: 15px;
+    //        max-width: 120px;
+    //    }
+    //
+    //    .client-logo {
+    //        max-width: 100px;
+    //        top: 32px;
+    //        font-size: 14px !important;
+    //    }
+    //}
+
+    @media screen and (max-width: 280px) {
+        .main-logo {
+            top: 8px;
+            left: -9px;
+            max-width: 90px;
+        }
+
+        .client-logo {
+            max-width: 100px;
+            top: 32px;
+            font-size: 14px !important;
+        }
+    }
+}

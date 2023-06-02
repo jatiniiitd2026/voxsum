@@ -1,0 +1,28 @@
+<div class="">
+    <div class="text-center">
+        <h1 class="section-heading mb-8">Frequently Asked Questions</h1>
+    </div>
+    <div class="faq-accordion">
+        <div class="text-right m-5">
+            <ng-container *ngIf="!panelOpenState; else closePanel">
+                <button (click)="openAll()" mat-flat-button>Open All</button>
+            </ng-container>
+            <ng-template #closePanel>
+                <button (click)="closeAll()" *ngIf="panelOpenState" mat-flat-button>Close All</button>
+            </ng-template>
+        </div>
+
+        <mat-accordion #myAccordion="matAccordion" multi="true">
+            <ng-container *ngFor="let data of faqData">
+                <mat-expansion-panel class="py-6 md:py-0 lg:py-2">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title [innerHTML]="data.question" class="lg:text-2xl text-lg">
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p [innerHTML]="data.answer | safeHTML" class="text-left lg:text-lg text-base py-2">
+                    </p>
+                </mat-expansion-panel>
+            </ng-container>
+        </mat-accordion>
+    </div>
+</div>

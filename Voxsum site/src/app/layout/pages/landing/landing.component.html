@@ -1,0 +1,47 @@
+<section class="mt-20" id="banner" role="banner">
+    <app-banner [banners]="bannersArr" [enableLink]="isBannerLinkActive"></app-banner>
+</section>
+<div class="mx-auto xl:mx-auto xl:mr-auto" id="main-content" role="main">
+    <div class="md:p-20">
+        <section class="py-8" data-aos="fade-down" id="how-to-participate">
+            <h1 [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.HEADING' | translate"
+                class="section-heading text-center pb-8"></h1>
+            <div class="text-left mb-8">
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_1.TITLE' | translate" class="para-heading"></p>
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_1.DESCRIPTION' | translate"
+                   class="para-content"></p>
+            </div>
+            <div class="text-left mb-8">
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_2.TITLE' | translate" class="para-heading"></p>
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_2.DESCRIPTION' | translate"
+                   class="para-content"></p>
+            </div>
+            <div class="text-left mb-8">
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_3.TITLE' | translate" class="para-heading"></p>
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_3.DESCRIPTION' | translate"
+                   class="para-content"></p>
+            </div>
+            <div class="text-left mb-8">
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_4.TITLE' | translate" class="para-heading"></p>
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_4.DESCRIPTION' | translate"
+                   class="para-content"></p>
+            </div>
+            <div class="text-left mb-8">
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_5.TITLE' | translate" class="para-heading"></p>
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_5.DESCRIPTION' | translate"
+                   class="para-content"></p>
+            </div>
+            <div class="text-left mb-8">
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_6.TITLE' | translate" class="para-heading"></p>
+                <p [innerHTML]="'PAGES.LANDING.HOW_TO_PARTICIPATE.STEP_6.DESCRIPTION' | translate"
+                   class="para-content"></p>
+            </div>
+        </section>
+        <section class="pb-8" data-aos="fade-down" id="faq">
+            <app-faq></app-faq>
+        </section>
+        <section class="pt-8" data-aos="fade-down" id="support">
+            <app-support-form></app-support-form>
+        </section>
+    </div>
+</div>

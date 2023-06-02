@@ -1,0 +1,37 @@
+<header class="fixed w-full top-0 bg-white z-40" role="navigation">
+    <div class="navmenu container mx-auto lg:ml-auto xl:mx-auto xl:mr-auto">
+        <div class="main-logo">
+            <a routerLink="/home">
+
+                <img src="https://i.postimg.cc/9XKLHhby/Geometric-Technology-Company.png" alt="voxsum logo"/>
+            </a>
+        </div>
+       <div class="client-logo">
+           <button class="button mikmak-discover">+Extension</button>
+       </div>
+        <div #navMenu class="navigation flex flex-col-reverse lg:items-center header-height lg:flex-col lg:static">
+            <div class="navigation-inner-container">
+                <!-- Menu Links-->
+                <div class="sub flex flex-col w-100 lg:flex-row lg:items-center bg-white">
+                    <ng-container *ngFor="let links of menuLinks; let i = index; let l = count;">
+                        <div class="relative mega-link">
+                            <button (click)="clickHandle(links)" [ngClass]="{'text-main-blue': i !== l - 1, 'text-main-blue2': i === l - 1, 'hover-link': hoverLinkRoute === links.path}"
+                                    class="text-base tracking-default font-sans-semi-bold font-NeutraText-Regular tracking-nav lg:hover:text-main-grey uppercase transition ease-linear duration-300 mob-button flex items-center justify-between"
+                                    tabindex="0"
+                            > {{links.title! | translate }}
+                            </button>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Hamburger Menu-->
+    <button (click)="toggle()" [class.is-active]="isHamburgerOpen"
+            class="hamburger hamburger-button hamburger--collapse-r flex justify-center items-center" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+</header>

@@ -1,0 +1,11 @@
+<footer aria-label="footer" class="footer-container mt-28 px-3" role="contentinfo">
+    <div class="pt-8 text-center para-content">
+        <ng-container *ngFor="let data of footerLinks">
+            <a [href]="data.path" target="_blank">{{data.title! | translate}}</a>
+        </ng-container>
+    </div>
+    <div class="pt-5">
+        <p [innerHTML]="'COMMON.FOOTER.COPYRIGHT' | translate" class="para-content footer-text text-center">
+        </p>
+    </div>
+</footer>

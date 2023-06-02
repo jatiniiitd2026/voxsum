@@ -1,0 +1,149 @@
+<section class="register-page" data-aos="fade-up">
+    <div class="text-center pt-6">
+        <h1 [innerHTML]="'PAGES.REGISTRATION.HEADING'| translate" class="section-heading mt-20"></h1>
+    </div>
+    <div class="px-4 max-w-5xl mx-auto">
+        <form  (ngSubmit)="onSubmit()" [formGroup]="registrationForm"
+              class="flex flex-col pt-6 max-w-800 mx-auto">
+            <div class="sm:flex">
+                <!--First Name-->
+                <mat-form-field appearance="outline" class="mb-2 sm:pr-4 w-full">
+                    <mat-label [innerHTML]="'PAGES.REGISTRATION.FIRSTNAME'| translate" class="input-text"></mat-label>
+                    <input class="input-text" formControlName="firstName" matInput type="text">
+                    <mat-error *ngFor="let validation of registrationValidationMessages.errorMessages.firstName"
+                               class="text-base">
+                        <ng-container
+                            *ngIf="registrationForm.controls['firstName'].hasError(validation.type) && displayError('firstName', validation)"
+                            class="error-message">
+                            {{validation.message}}
+                        </ng-container>
+                    </mat-error>
+                </mat-form-field>
+                <!--Last Name-->
+                <mat-form-field appearance="outline" class="mb-2 sm:pl-4 w-full">
+                    <mat-label [innerHTML]="'PAGES.REGISTRATION.LASTNAME'| translate" class="input-text"></mat-label>
+                    <input class="input-text" formControlName="lastName" matInput type="text">
+                    <mat-error *ngFor="let validation of registrationValidationMessages.errorMessages.lastName"
+                               class="text-base">
+                        <ng-container
+                            *ngIf="registrationForm.controls['lastName'].hasError(validation.type) && displayError('lastName', validation)"
+                            class="error-message">
+                            {{validation.message}}
+                        </ng-container>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <!--Email Group-->
+            <div  formGroupName="emails">
+                <!--Email-->
+                <mat-form-field appearance="outline" class="mb-2 w-full">
+                    <mat-label [innerHTML]="'PAGES.REGISTRATION.EMAIL'| translate" class="input-text"></mat-label>
+                    <input autocomplete="email" class="input-text" formControlName="email" matInput
+                           type="email">
+                    <mat-error *ngFor="let validation of registrationValidationMessages.errorMessages.email"
+                               class="text-base">
+                        <ng-container *ngIf="registrationForm.get('emails.email')?.hasError(validation.type)"
+                                      class="error-message">
+                            {{validation.message}}
+                        </ng-container>
+                    </mat-error>
+                </mat-form-field>
+                <!--Confirm Email-->
+                <mat-form-field appearance="outline" class="mb-2 w-full">
+                    <mat-label [innerHTML]="'PAGES.REGISTRATION.CONFIRMEMAIL'| translate"
+                               class="input-text"></mat-label>
+                    <input autocomplete="email" class="input-text" formControlName="confirmEmail" matInput
+                           type="email">
+                    <mat-error *ngFor="let validation of registrationValidationMessages.errorMessages.confirmEmail"
+                               class="text-base">
+                        <ng-container *ngIf="registrationForm.get('emails.confirmEmail')?.hasError(validation.type)"
+                                      class="error-message">
+                            {{validation.message}}
+                        </ng-container>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="sm:flex">
+                <!--Phone No-->
+                <mat-form-field appearance="outline" class="mb-2 sm:pr-4 w-full">
+                    <mat-label [innerHTML]="'PAGES.REGISTRATION.PHONENUMBER'| translate" class="input-text"></mat-label>
+                    <input class="input-text" formControlName="phoneNo" matInput type="text">
+                    <mat-error *ngFor="let validation of registrationValidationMessages.errorMessages.phoneNo"
+                               class="text-base">
+                        <ng-container
+                            *ngIf="registrationForm.controls['phoneNo'].hasError(validation.type) && displayError('phoneNo', validation)"
+                            class="error-message">
+                            {{validation.message}}
+                        </ng-container>
+                    </mat-error>
+                </mat-form-field>
+                <!--Purchase From-->
+                <mat-form-field appearance="outline" class="mb-2 sm:pl-4 w-full">
+                    <mat-label [innerHTML]="'PAGES.REGISTRATION.PURCHASEFROM'| translate" class="input-text"></mat-label>
+                    <mat-select formControlName="purchaseFrom">
+                        <mat-option *ngFor="let purchase of purchases" [value]="purchase.value" >
+                            {{purchase.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngFor="let validation of registrationValidationMessages.errorMessages.purchaseFrom"
+                               class="text-base">
+                        <ng-container
+                            *ngIf="registrationForm.controls['purchaseFrom'].hasError(validation.type) && displayError('purchaseFrom', validation)"
+                            class="error-message">
+                            {{validation.message}}
+                        </ng-container>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline" class="mb-2 w-full">
+                <mat-label [innerHTML]="'PAGES.REGISTRATION.PROMOTION'| translate" class="input-text"></mat-label>
+                <mat-select formControlName="promotionFrom">
+                    <mat-option *ngFor="let promotion of promotions" [value]="promotion.value" >
+                        {{promotion.viewValue}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngFor="let validation of registrationValidationMessages.errorMessages.promotionFrom"
+                           class="text-base">
+                    <ng-container
+                        *ngIf="registrationForm.controls['promotionFrom'].hasError(validation.type) && displayError('promotionFrom', validation)"
+                        class="error-message">
+                        {{validation.message}}
+                    </ng-container>
+                </mat-error>
+            </mat-form-field>
+            <div class="sm:flex flex-col">
+                <!--Is Agree-->
+                <mat-checkbox class="mb-2 pl-1 text-left text-main-blue " color="primary"
+                              formControlName="isAgree">
+                    <p [innerHTML]="'PAGES.REGISTRATION.ISAGREE'| translate" class="whitespace-pre-line"></p>
+                </mat-checkbox>
+                <mat-error *ngFor="let validation of registrationValidationMessages.errorMessages.isAgree"
+                           class="text-base">
+                    <ng-container
+                        *ngIf="registrationForm.controls['isAgree'].hasError(validation.type) && isFormTouched"
+                        class="error-message">
+                        <p class="text-left text-small font-sans-medium pl-6">{{validation.message}}</p>
+                    </ng-container>
+                </mat-error>
+            </div>
+            <!--ReCaptcha-->
+            <re-captcha class="mt-5" data-theme="dark" formControlName="recaptcha"></re-captcha>
+            <mat-error *ngFor="let validation of registrationValidationMessages.errorMessages.recaptcha"
+                       class="text-base">
+                <ng-container *ngIf="registrationForm.controls['recaptcha'].hasError(validation.type) && isFormTouched"
+                              class="error-message">
+                    <p class="text-left text-small font-sans-medium mt-2">{{validation.message}}</p>
+                </ng-container>
+            </mat-error>
+            <!--Submit Button-->
+            <div class="text-center mt-10">
+                <button [innerHTML]="'PAGES.REGISTRATION.SUBMIT'| translate" class="px-16 py-4 app-button"
+                        type="submit">
+                </button>
+            </div>
+            <a class="text-center text-main-blue mt-10 font-NeutraText-BoldItalic" routerLink="/login" [innerHTML]="'PAGES.REGISTRATION.ALREADY_LOGIN'| translate"></a>
+        </form>
+    </div>
+</section>
+
+

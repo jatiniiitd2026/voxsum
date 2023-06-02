@@ -1,0 +1,37 @@
+<section class="login py-10" data-aos="fade-up">
+    <div class="text-center pt-6">
+        <ng-container *ngIf="showForm; else spinner">
+            <h1 class="section-heading mt-20"
+                [innerHTML]="'PAGES.LOGIN.WELCOME' | translate"></h1>
+            <div class="px-4 max-w-5xl mx-auto">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col mt-6 max-w-800 mx-auto">
+                    <mat-form-field class="mb-2" appearance="outline">
+                        <mat-label class="input-text"
+                                   [innerHTML]="'PAGES.LOGIN.EMAIL' | translate"></mat-label>
+                        <input class="input-text" type="email" formControlName="email" autocomplete="email" matInput>
+                        <mat-error *ngFor="let validation of loginValidationMessages.errorMessages.email">
+                            <ng-container class="error-message"
+                                          *ngIf="loginForm.controls['email'].hasError(validation.type)">
+                                {{validation.message | translate}}
+                            </ng-container>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <div class="text-center mt-10">
+                        <button [innerHTML]="'PAGES.REGISTRATION.SUBMIT'| translate" class="px-16 py-4 app-button"
+                                type="submit">
+                        </button>
+                    </div>
+                    <p>&nbsp;</p>
+                    <a class="text-center text-main-blue font-NeutraText-BoldItalic" routerLink="/registration"
+                       [innerHTML]="'PAGES.LOGIN.REGISTER' | translate"></a>
+                </form>
+            </div>
+        </ng-container>
+        <ng-template #spinner>
+            <div class="min-h-400 grid place-items-center">
+                <mat-spinner></mat-spinner>
+            </div>
+        </ng-template>
+    </div>
+</section>

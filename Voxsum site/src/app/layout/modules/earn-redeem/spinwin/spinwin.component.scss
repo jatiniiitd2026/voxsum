@@ -1,0 +1,111 @@
+@import "src/styles";
+// Background
+.bg-spin-win {
+    background: linear-gradient(to bottom, #3b87c5, #2e76b8, #2366ab, #1b559d, #15458f);
+}
+
+// Hide Green default arrow
+.peg {
+    visibility: hidden !important;
+}
+
+.wheelContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    width: 100vw;
+    height: 95vh;
+}
+
+.marginLeft{
+    margin-right: -12rem
+}
+
+
+.mat-spinner {
+    ::ng-deep circle {
+        stroke: #000080;
+    }
+}
+
+// SPIN ME button styling
+.pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: #87ceeb;
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: #87ceeb;
+}
+
+.front {
+    display: block;
+    position: relative;
+    padding: 6px 24px;
+    border-radius: 12px;
+    font-size: 2rem;
+    color: #000080;
+    background: white;
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.pushable:hover {
+    filter: brightness(110%);
+}
+
+.pushable:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.pushable:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.pushable:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed;
+}

@@ -1,0 +1,10 @@
+FROM node:14.18-alpine3.14 AS build
+WORKDIR /usr/src/app
+COPY package.json ./
+RUN npm install
+COPY . .
+RUN npm run build-prod
+
+FROM nginx:1.17.1-alpine
+COPY --from=build /usr/src/app/dist/microsite-mucinex-fast-max-GWP-frontend /usr/share/nginx/html
+EXPOSE 80

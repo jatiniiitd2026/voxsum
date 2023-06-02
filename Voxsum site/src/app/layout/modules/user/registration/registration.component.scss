@@ -1,0 +1,35 @@
+::ng-deep .mat-form-field-label sup {
+    color: red;
+    font-size: 85%;
+    position: relative;
+    top: -.25em;
+}
+
+//TODO
+.hidden {
+    display: none;
+}
+
+::ng-deep.mat-tooltip {
+    font-size: 15px;
+    background-color: black;
+}
+
+.read-only{
+    mat-form-field{
+        ::ng-deep.mat-form-field-wrapper{
+            ::ng-deep.mat-form-field-flex{
+                ::ng-deep.mat-form-field-outline {
+                    background-color: lightgray !important;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+/*Custom mat colors*/
+:host ::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-outline-thick,
+:host ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label, .mat-error {
+    color: #b3000f !important;
+}

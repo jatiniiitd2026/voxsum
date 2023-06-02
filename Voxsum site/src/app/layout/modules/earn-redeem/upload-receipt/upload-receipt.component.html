@@ -1,0 +1,92 @@
+<section class="upload-page" role="main">
+    <div class="mx-auto text-center px-4">
+
+        <div class="max-w-800 mx-auto" data-aos="fade-up">
+            <h1 class="section-heading uppercase py-6 tracking-nav" [innerHTML]="'PAGES.UPLOAD.TITLE' | translate">
+            </h1>
+            <p class="font-NeutraText-Regular text-2xl mb-6" [innerHTML]="'PAGES.UPLOAD.DESCRIPTION' | translate"></p>
+            <p class="font-NeutraText-Regular text-lg" [innerHTML]="'PAGES.UPLOAD.INSTRUCTION' | translate"></p>
+            <p class="font-NeutraText-Bold text-lg" [innerHTML]="'PAGES.UPLOAD.NOTE' | translate">
+            </p>
+<!--            Previous uploaded receipts-->
+            <ng-container *ngIf="receiptsSubmitted">
+                <div class="mt-6">
+                    <p class="font-NeutraText-Regular text-2xl mb-6"><u> Previous Receipts Status</u></p>
+                    <div >
+                        <table mat-table [dataSource]="dataSource">
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="submissionDate">
+                                <th mat-header-cell *matHeaderCellDef> Date Submitted</th>
+                                <td mat-cell *matCellDef="let element"> {{element.submissionDate | date:'shortDate'}} </td>
+                            </ng-container>
+
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="status">
+                                <th mat-header-cell *matHeaderCellDef> Receipt status </th>
+                                <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+
+                        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                                       showFirstLastButtons
+                                       aria-label="Select page of periodic elements">
+                        </mat-paginator>
+                    </div>
+
+                </div>
+            </ng-container>
+
+            <!-- DropZone area -->
+            <div class="max-w-4xl mx-auto">
+                <ngx-dropzone
+                    (change)="onSelect($event)"
+                    [maxFileSize]="maxFileSize"
+                    [multiple]="false"
+                    accept="image/jpg,image/jpeg,image/png, application/pdf"
+                    class="my-4 height-300 rounded-none-imp justify-center"
+                >
+                    <ngx-dropzone-label [innerHTML]="'PAGES.UPLOAD.UPLOAD_TEXT' | translate"
+                                        class="text-main-blue font-sans-regular"></ngx-dropzone-label>
+                    <ng-container *ngIf="!isPdf">
+                        <ngx-dropzone-image-preview (removed)="onRemove(f)"
+                                                    *ngFor="let f of files"
+                                                    [file]="f"
+                                                    [removable]="true"
+                                                    ngProjectAs="ngx-dropzone-preview"
+                        >
+                        </ngx-dropzone-image-preview>
+                    </ng-container>
+                    <ng-container *ngIf="isPdf">
+                        <ngx-dropzone-preview (removed)="onRemovePdf()" *ngFor="let f of files" [removable]="true">
+                            <ngx-dropzone-label>{{ f.name }}</ngx-dropzone-label>
+                        </ngx-dropzone-preview>
+                    </ng-container>
+                </ngx-dropzone>
+            </div>
+            <div class="text-center mt-10">
+                <ng-container *ngIf="uploadAllowed else notAllowed">
+                    <button
+                        (click)="handleUpload()"
+                        [disabled]="formSubmitted"
+                        class="app-button px-16 py-4">
+                        <span *ngIf="!formSubmitted" [innerHTML]="'PAGES.UPLOAD.BUTTON' | translate"></span>
+                        <mat-spinner *ngIf="formSubmitted" color="primary" diameter='30' strokeWidth='5'></mat-spinner>
+                    </button>
+                </ng-container>
+                <ng-template #notAllowed>
+                    <button
+                        (click)="handleUpload()"
+                        disabled
+                        class="app-button px-16 py-4 cursor-not-allowed">
+                        <span *ngIf="!formSubmitted" [innerHTML]="'PAGES.UPLOAD.BUTTON' | translate"></span>
+                        <mat-spinner *ngIf="formSubmitted" color="primary" diameter='30' strokeWidth='5'></mat-spinner>
+                    </button>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</section>

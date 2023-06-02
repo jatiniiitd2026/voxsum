@@ -1,0 +1,20 @@
+<swiper [config]="sliderConfig" data-aos="fade" effect="fade">
+    <ng-container *ngFor="let banner of banners">
+        <ng-template swiperSlide>
+            <div class="hidden mob:block">
+                <div class="relative mx-auto">
+                    <img (click)="enableLink ? redirect(banner.link) : ''"
+                         [src]="banner.desktop"
+                         alt="banner-image-olay"
+                         class="mx-auto"/>
+                </div>
+            </div>
+            <div class="mob:hidden">
+                <img
+                    [src]="banner.mobile"
+                    alt=""/>
+            </div>
+        </ng-template>
+    </ng-container>
+</swiper>
+

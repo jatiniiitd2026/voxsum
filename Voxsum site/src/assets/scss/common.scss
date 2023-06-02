@@ -1,0 +1,59 @@
+/**
+Content based common styles
+ */
+.section-heading {
+    @apply text-secondary-color;
+    @apply text-5xl;
+    @apply font-NeutraText-Bold;
+}
+
+.para-heading {
+    @apply font-NeutraText-Bold;
+    @apply text-2xl;
+    @apply leading-8;
+    @apply text-center;
+}
+
+.para-content {
+    @apply text-lg;
+    @apply leading-7;
+    @apply font-NeutraText-Regular;
+    @apply text-center;
+}
+
+/**
+Button through out the app
+ */
+.app-button {
+    @apply border-gray-600;
+    @apply text-white;
+    @apply bg-tertiary-color;
+    @apply border-1;
+
+    &:hover {
+        @apply bg-white;
+        @apply text-black;
+        @apply border-1;
+        @apply border-blue-700;
+        transition: all 0.5s ease;
+    }
+}
+
+button {
+    &:focus-visible {
+        outline: 3px dashed #e69600;
+    }
+}
+
+.footer-container{
+    @apply bg-tertiary-color;
+}
+
+.spinWheelText{
+    @apply font-TrimPosterCompressed;
+    letter-spacing: 0.1em;
+    font-size: 1.4em;
+    color: yellow;
+}
+
+

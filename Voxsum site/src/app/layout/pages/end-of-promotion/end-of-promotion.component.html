@@ -1,0 +1,10 @@
+<div role="main">
+<div class="h-20 header-logo">
+    <img [src]="headerLogo" alt="header-logo" class="w-40">
+</div>
+    <app-banner [banners]="bannersArr" [enableLink]="isBannerLinkActive"></app-banner>
+    <div class="promo-info">
+        <h1 [innerHTML]="'PAGES.EOP.TITLE' | translate" class="text-center mt-16"></h1>
+        <h2 [innerHTML]="'PAGES.EOP.INFO' | translate" class="text-center mb-16"></h2>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+{
+    "colorArray": [
+        "#87ceeb",
+        "#87ceeb",
+        "#ffffff",
+        "#ffffff",
+        "#ffffff",
+        "#ffffff",
+        "#ffffff",
+        "#ffffff",
+        "#ffffff",
+        "#ffffff",
+        "#87ceeb"
+    ],
+    "segmentValuesArray": [
+        {
+            "probability": 35,
+            "type": "string",
+            "value": "5 Points",
+            "win": true,
+            "resultText": "You won an additional 5 Points!",
+            "textColor": "#EA9D1F",
+            "userData": {
+                "score": 50
+            }
+        },
+        {
+            "probability": 25,
+            "type": "string",
+            "value": "10 Points",
+            "win": true,
+            "resultText": "You won an additional 10 Points!",
+            "textColor": "white",
+            "userData": {
+                "score": 1000000
+            }
+        },
+        {
+            "probability": 10,
+            "type": "string",
+            "value": "Spin,Again",
+            "win": false,
+            "resultText": "Sorry you've to spin again",
+            "textColor": "#00A4DC",
+            "userData": {
+                "score": 0
+            }
+        },
+        {
+            "probability": 10,
+            "type": "string",
+            "value": "20 Points",
+            "win": true,
+            "resultText": "You won an additional 20 Points!",
+            "textColor": "white",
+            "userData": {
+                "score": 0
+            }
+        },
+        {
+            "probability": 10,
+            "type": "string",
+            "value": "Try Again,Next Time",
+            "win": false,
+            "resultText": "Sorry try again next time",
+            "textColor": "#A76828",
+            "userData": {
+                "score": 40
+            }
+        },
+        {
+            "probability": 10,
+            "type": "string",
+            "value": "Leap XL,USB Charger",
+            "win": true,
+            "resultText": "You've won a USB Charger",
+            "textColor": "white",
+            "userData": {
+                "score": 0
+            }
+        }
+    ],
+    "svgWidth": 1024,
+    "svgHeight": 1024,
+    "wheelStrokeColor": "#222",
+    "wheelStrokeWidth": 0,
+    "wheelSize": 900,
+    "wheelTextOffsetY": 80,
+    "wheelTextColor": "#EDEDED",
+    "wheelTextSize": "2.7em",
+    "wheelImageOffsetY": 40,
+    "wheelImageSize": 50,
+    "centerCircleSize": 70,
+    "centerCircleStrokeColor": "#3B1B0E",
+    "centerCircleStrokeWidth": 0,
+    "centerCircleFillColor": "#222",
+    "centerCircleImageUrl": "assets/images/logo/leap-image.png",
+    "centerCircleImageWidth": 650,
+    "centerCircleImageHeight": 650,
+    "segmentStrokeColor": "#87ceeb",
+    "segmentStrokeWidth": 2,
+    "centerX": 512,
+    "centerY": 460,
+    "hasShadows": false,
+    "numSpins": 3,
+    "spinDestinationArray": [],
+    "minSpinDuration": 3,
+    "gameOverText": "I HOPE YOU ENJOYED SPIN2WIN WHEEL.<br>NOW GO AND <a href='https://codecanyon.net/item/spin2win-wheel-spin-it-2-win-it/16337656?ref=chrisgannon'>BUY IT!</a> :)",
+    "invalidSpinText": "INVALID SPIN. PLEASE SPIN AGAIN.",
+    "introText": "YOU HAVE TO<br>SPIN IT <span style='color:#F282A9;'>2</span> WIN IT!",
+    "hasSound": true,
+    "gameId": "9a0232ec06bc431114e2a7f3aea03bbe2164f1aa",
+    "clickToSpin": true,
+    "spinDirection": "ccw"
+}

@@ -1,0 +1,65 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./",
+        "outDir": "./dist/out-tsc",
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": false,
+        "noFallthroughCasesInSwitch": true,
+        "sourceMap": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "target": "es2017",
+        "module": "es2020",
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "paths": {
+            "@app/*": [
+                "src/app/*"
+            ],
+            "@core/*": [
+                "src/app/core/*"
+            ],
+            "@data/*": [
+                "src/app/data/*"
+            ],
+            "@layout/*": [
+                "src/app/layout/*"
+            ],
+            "@pages/*": [
+                "src/app/layout/pages/*"
+            ],
+            "@modules/*": [
+                "src/app/layout/modules/*",
+                "src/app/layout/modules/user/*",
+                "src/app/layout/modules/earn-redeem/*"
+            ],
+            "@shared/*": [
+                "src/app/shared/*",
+                "src/app/shared/components/*"
+            ],
+            "@env": [
+                "src/environments/*"
+            ],
+            "@assets/*": [
+                "src/assets/*"
+            ]
+        }
+    },
+    "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
+    }
+}

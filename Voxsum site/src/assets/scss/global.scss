@@ -1,0 +1,13 @@
+/**
+Global context styles
+ */
+
+
+a:hover {
+    @apply text-primary-color;
+    transition: all 0.15s ease;
+}
+
+.white {
+    background-color: white;
+}

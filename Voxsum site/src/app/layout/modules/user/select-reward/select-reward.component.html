@@ -1,0 +1,75 @@
+<section class="login py-10" data-aos="fade-up">
+    <h1 class="section-heading mt-20 text-center">CHOOSE YOUR REWARD</h1>
+    <h2 class="para-heading mt-20 text-center">Select your reward from the dropdown list below</h2>
+    <p class="mt-5 text-center"><i>Once you have selected your reward, you will receive an email from
+        support@receiptprocessor.com with more details.<br/> If you don’t see it in your inbox, please be sure to check
+        your spam, junk, and promotions folders</i></p>
+    <div class="px-4 max-w-5xl mx-auto">
+        <form (ngSubmit)="onSubmit()" [formGroup]="rewardForm" class="flex flex-col justify-center mt-20">
+            <mat-form-field appearance="outline">
+                <mat-label>Select Reward</mat-label>
+                <mat-select formControlName="reward">
+                    <mat-option *ngFor="let reward of rewards" [value]="reward.value">
+                        {{reward.viewValue}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="rewardForm.controls['reward'].hasError('required')">Please choose an option
+                </mat-error>
+            </mat-form-field>
+            <button [innerHTML]="'PAGES.REGISTRATION.SUBMIT'| translate" class="px-16 py-4 app-button mt-2"
+                    type="submit">
+            </button>
+        </form>
+
+        <div class="mt-20">
+            <p>
+                <strong>Airbnb:</strong> Funds do not expire. No fees apply to purchase/activation of Card. Redeemable
+                for merchandise and services on airbnb.com only. Cards can’t be redeemed for cash except as required by
+                law. Not valid as payment on credit account or for gratuities. Treat this Card as cash; lost, stolen, or
+                damaged Cards may be replaced at the Issuer’s election, if at all, only with Card purchase receipt and
+                Card number, and then only for the Card’s remaining value. Issued by Airbnb Payments, Inc. For Card and
+                balance info, call 1-855-424-7262 or visit airbnb.com. If your purchase exceeds the unused balance of
+                the Card, you must pay the excess at the time of purchase using another payment method. Redemption:
+                Online only. You can only redeem Airbnb gift cards by adding a US-based payment method to your Airbnb
+                account. <br/><br/>
+
+                <strong>Dunkin’:</strong> Card good only toward purchase of Dunkin’ products at participating US
+                locations. No expiration date or management fees. The purchase and/or reload of a Dunkin’ Card with
+                another Dunkin’ Card is prohibited. Card value may not be redeemed for cash, check or credit, unless
+                required by law. Use of card constitutes acceptance of these terms. We are not responsible for lost or
+                stolen cards unless registered online. Replacement card for lost or stolen registered cards issued for
+                remaining balance reflected in our records at time reported lost or stolen. This card may not be resold
+                by any unauthorized vendors. Unauthorized resale or attempted resale is grounds for cancellation. Cards
+                obtained through unauthorized channels will be void. Card issued by SVC Service II LLC. Visit
+                DunkinDonuts.com or call 1-800-447-0013 to check the balance on the card or for customer service (please
+                have card number ready). ©2021 DD IP Holder LLC.<br/><br/>
+
+                <strong>Hulu - Terms and Conditions</strong> Hulu gift subscriptions can be redeemed by visiting
+                hulu.com/start/gifting and inputting the subscription code. When gift balance is expended, access to
+                Hulu will end unless you provide another payment method, in which case monthly subscription charges will
+                apply until you cancel. Remaining gift balance will be forfeited upon cancellation. May not be exchanged
+                or used to offset amounts owed to Hulu; cannot be resold; not refundable or redeemable for cash, unless
+                required by law. Hulu is not responsible for lost or stolen gift cards or codes. Visit
+                www.hulu.com/start/gifting_terms for full terms and conditions.<br/><br/>
+
+                <strong>Nike - </strong>Nike Gift Cards are redeemable for merchandise online at Nike.com, Hurley.com,
+                Converse.com, at any Nike-owned and Converse-owned retail location in the United States and Puerto Rico
+                or by phone at 1-800-806-6453. This Gift Card is not redeemable at Hurley retail stores. Upon
+                redemption, any unused balance will remain on the Gift Card for future purchases. Gift Cards will not be
+                redeemed or exchanged for cash, except where required by law. Gift Cards will not be replaced if lost or
+                stolen without proper proof of purchase. No refunds or exchanges on Gift Cards. Nike Gift Cards do not
+                expire. For more information and to check your balance, visit Nike.com.<br/><br/>
+
+                <strong>Uber</strong> - Terms and Conditions By using this gift card, you accept the following terms and
+                conditions: This
+                card is redeemable via the Uber®️ or Uber Eats app within the U.S. in cities where Uber or Uber Eats is
+                available. Funds do not expire. The card is non-reloadable and, except where required by law, cannot be
+                redeemed for cash, refunded, or returned. You may be required to add a secondary payment method to use
+                this gift card with the Uber or Uber Eats app. The card is not redeemable outside the U.S. Issuer is not
+                responsible for lost or stolen cards, or unauthorized use. Depending on the state of purchase, this card
+                is issued by Bancorp Card Services, Inc. or The Bancorp Bank. For full terms and conditions and customer
+                service, visit uber.com/legal/gift.
+            </p>
+        </div>
+    </div>
+</section>

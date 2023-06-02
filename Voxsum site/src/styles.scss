@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*
+Table of content
+1) Imported Custom Fonts
+2) SCSS Global Variables
+3) SCSS Custom Imports
+4) SASS Custom Mixins
+*/
+
+/*
+1) Imported Custom Fonts
+*/
+@font-face {
+    font-family: 'NeutraText-Bold';
+    src: url(assets/fonts/NeutraText-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'NeutraText-BoldItalic';
+    src: url(assets/fonts/NeutraText-BoldItalic.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'NeutraText-Regular';
+    src: url(assets/fonts/NeutraText-Book.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'NeutraText-RegularItalic';
+    src: url(assets/fonts/NeutraText-BookItalic.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'TrimPosterCompressed';
+    src: url(assets/fonts/TrimPosterCompressed.otf) format("opentype");
+}
+
+/*
+2) SCSS Global Variables
+*/
+$hamburger-layer-color: #29397b;
+$hamburger-layer-width: 30px !default;
+$hamburger-layer-height: 3px;
+
+/*
+3) SCSS Custom Imports
+*/
+@import "assets/scss/tailwind";
+@import "assets/scss/material";
+@import 'node_modules/ngx-toastr/toastr';
+@import "~hamburgers/_sass/hamburgers/hamburgers";
+@import '~swiper/swiper-bundle';
+@import "assets/scss/global";
+@import "assets/scss/common";
+@import "assets/scss/variables";
+@import "assets/scss/mixin";
+@import "assets/scss/global";

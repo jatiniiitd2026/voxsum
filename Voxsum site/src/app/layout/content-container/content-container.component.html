@@ -1,0 +1,28 @@
+<app-page-loader></app-page-loader>
+<div class="mx-auto">
+    <ng-container >
+        <ng-container *ngIf="isSpinWheelRoute else spinnotallowed">
+            <router-outlet></router-outlet>
+        </ng-container>
+        <ng-template #spinnotallowed>
+            <app-header></app-header>
+            <div aria-label="main" class="mt-20">
+                <router-outlet></router-outlet>
+            </div>
+            <app-footer></app-footer>
+        </ng-template>
+    </ng-container>
+<!--    <ng-container *ngIf="!promotionStarted && !promotionEnded">-->
+<!--        <app-coming-soon></app-coming-soon>-->
+<!--        <app-footer></app-footer>-->
+<!--    </ng-container>-->
+<!--    <ng-container *ngIf="promotionEnded && !promotionStarted && !selectReward">-->
+<!--        <app-end-of-promotion></app-end-of-promotion>-->
+<!--        <app-footer></app-footer>-->
+<!--    </ng-container>-->
+<!--    <ng-container *ngIf="promotionEnded && !promotionStarted && selectReward">-->
+<!--        <app-select-reward (canClaimReward)="updateRewardClaimValue($event)"></app-select-reward>-->
+<!--        <app-footer></app-footer>-->
+<!--    </ng-container>-->
+</div>
+

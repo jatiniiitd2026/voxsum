@@ -1,0 +1,25 @@
+
+.mat-expansion-panel{
+    @apply bg-tertiary-color;
+    @apply text-black;
+    padding-bottom: 0;
+}
+
+::ng-deep .mat-expansion-panel-body {
+    @apply pt-8;
+    @apply text-black;
+    @apply bg-white;
+}
+
+::ng-deep .mat-expansion-panel-header-title {
+    @apply text-plain-color;
+}
+
+button:focus{
+    @apply outline-black;
+}
+
+.mat-expansion-panel .mat-expansion-panel-header.cdk-keyboard-focused {
+    outline: 2px dotted white;
+    outline-offset: -10px;
+}

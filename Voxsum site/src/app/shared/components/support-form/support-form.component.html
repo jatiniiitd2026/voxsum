@@ -1,0 +1,50 @@
+<div class="text-center">
+    <h1 [innerHTML]="'PAGES.LANDING.SUPPORT.HEADING' | translate" class="section-heading mb-8"></h1>
+</div>
+<div class="px-4 max-w-full mx-auto">
+    <form (ngSubmit)="onSubmit(myForm)" [formGroup]="supportForm" #myForm="ngForm"
+          class="flex flex-col mt-6 max-w-800 mx-auto">
+        <div class="sm:flex">
+            <mat-form-field appearance="outline" class="mb-2 sm:pr-4 w-full">
+                <mat-label [innerHTML]="'PAGES.LANDING.SUPPORT.NAME' | translate"
+                           class="input-text para-content"></mat-label>
+                <input formControlName="name" matInput type="text"/>
+                <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.name">
+                    <ng-container
+                        *ngIf="supportForm.controls['name'].hasError(validation.type)"
+                        class="error-message">
+                        {{validation.message}}
+                    </ng-container>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mb-2 sm:pr-4 w-full">
+                <mat-label [innerHTML]="'PAGES.LANDING.SUPPORT.EMAIL' | translate"
+                           class="input-text para-content"></mat-label>
+                <input formControlName="email" matInput type="email">
+                <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.email">
+                    <ng-container *ngIf="supportForm.controls['email'].hasError(validation.type)"
+                                  class="error-message">
+                        {{validation.message}}
+                    </ng-container>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline" class="w-full mb-2 sm:pr-4 w-full" id="mat-form-textarea">
+            <mat-label [innerHTML]="'PAGES.LANDING.SUPPORT.MESSAGE' | translate" class="para-content"></mat-label>
+            <textarea class="support-input-textarea" formControlName="message" matInput
+                      rows="8"></textarea>
+            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.message">
+                <ng-container *ngIf="supportForm.controls['message'].hasError(validation.type)"
+                              class="error-message">
+                    {{validation.message}}
+                </ng-container>
+            </mat-error>
+        </mat-form-field>
+        <div class="text-center mt-10">
+            <button [innerHTML]="'PAGES.LANDING.SUPPORT.BUTTON' | translate" class="app-button px-16 py-4"
+                    type="submit">
+            </button>
+        </div>
+    </form>
+</div>
+

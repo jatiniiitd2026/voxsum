@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VOXSUM</title>
+    <base href="/">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=3" name="viewport">
+    <link href="" rel="icon" type="image/x-icon">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+        var PGdataLayer =
+            {
+                'GTM': {
+                    'SiteLocale': 'en-us',
+                    'SiteTouchpoint': '47238',
+                    'SiteCountry': 'US',
+                    'SiteBrand': 'MucinexFastMax',
+                    'SiteLanguage': 'EN',
+                    'SiteEnvironment': 'Prod',
+                    'SiteHost': 'Azure',
+                    'SiteTechnicalAgency': 'pep',
+                    'SiteStatus': 'Live',
+                    'GoogleAnalyticsLocal': 'UA-33244045-81',
+                    'ConsentOverlay': 'OneTrust',
+                    'ConsentOverlayID': '72db2171-d705-473a-85d7-baf8a1af425c-test',
+                    'SitePrivacyProtection': 'CCPA'
+                }
+            }
+    </script>
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N94XXFB');</script>
+</head>
+
+<body>
+<noscript>
+    <iframe height="0"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-N94XXFB" style="display:none;visibility:hidden"
+            width="0"></iframe>
+</noscript>
+
+<app-root></app-root>
+
+<!--  Spin Wheel Related scripts -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/utils/Draggable.min.js'></script>
+<script src='assets/spin-win/js/ThrowPropsPlugin.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/TextPlugin.min.js'></script>
+
+<!--Google Places API-->
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR6SCUsnWXHyNNQfYw9L7IFgeKexj4Gmc&libraries=places&language=en"></script>
+
+<!-- MikMak Discover Code -->
+<script>!function (e, t, i, r, a, d) {
+    e[r] = e[r] || !1;
+    var n = t.querySelectorAll(a);
+    if (n) for (var c = 0; c < n.length; c++) {
+        n[c].addEventListener("click", function () {
+            e[r] = !0
+        })
+    }
+    var m = t.createElement("script");
+    m.setAttribute("data-mikmak-brand", i), m.type = "text/javascript", m.src = d, m.defer = !0, t.body.appendChild(m)
+}(window, document, "b7289150-6e86-a67e-fc43-d50a84240bb0", "mikmak_discover", ".mikmak-discover", "https://embed.mikmak.tv/v1-int-bundle");
+</script>
+<!-- End MikMak Discover Code -->
+</body>
+</html>

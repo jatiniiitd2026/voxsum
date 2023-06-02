@@ -1,0 +1,51 @@
+@mixin button-slide($size: 70px) {
+    .support-btn-submit {
+        padding: 16px;
+        border: 1px solid $color1;
+        border-radius: 0;
+        background-color: $color1;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        line-height: 1.2;
+        cursor: pointer;
+        transition: padding .8s cubic-bezier(.19, 1, .22, 1);
+        width: 220px;
+        position: relative;
+
+        &:after {
+            content: "»";
+            position: absolute;
+            opacity: 0;
+            top: 14px;
+            right: 0;
+            transition: 0.5s;
+            color: white;
+        }
+
+
+        &:hover {
+            padding-right: 24px;
+            padding-left: 8px;
+
+            &:after {
+                opacity: 1;
+                right: $size;
+            }
+        }
+
+        &.no-hover {
+            &:hover {
+                padding: 16px;
+
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

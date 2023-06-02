@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo rm /mnt/deploy/mucinex-2022/* 
+docker-compose -f /mnt1/deploy/mucinex/docker-compose.yml stop && \
+docker rm mucinex-BE && \
+docker rm mucinex-FE && \
+docker rmi 340792027710.dkr.ecr.us-west-2.amazonaws.com/microsite-mucinex-2022:stagFElatest && \
+docker rmi 340792027710.dkr.ecr.us-west-2.amazonaws.com/microsite-mucinex-2022:staglatest 
+echo 'image deleted'
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 340792027710.dkr.ecr.us-west-2.amazonaws.com && \
+docker-compose -f /mnt1/deploy/mucinex/docker-compose.yml up -d && \
+sudo service nginx restart
