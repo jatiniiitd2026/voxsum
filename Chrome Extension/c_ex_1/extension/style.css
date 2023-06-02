@@ -1,0 +1,102 @@
+body {
+    width: 342px;
+    height: 554px;
+    background: #FFFFFF;
+    font-family: 'Geologica', sans-serif;
+}
+.logo {
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    left:-10px;
+    top: 5px;
+}
+.heading {
+    position: absolute;
+    width: 161px;
+    height: 60px;
+    left: 143px;
+    top: 18px;
+}
+h1 {
+    font-size: 45px;
+    /* identical to box height */
+    letter-spacing: 0.025em;
+}
+.para {
+    position: absolute;
+    width: 265px;
+    height: 57px;
+    left: 39px;
+    top: 125px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #000000;
+
+}
+.photo {
+    position: absolute;
+    width: 200px;
+    height: 179px;
+    left: 71px;
+    top: 240px;
+    background: url(t.png);
+}
+.download-btn {
+    position: absolute;
+    width: 210px;
+    height: 45px;
+    left: 67px;
+    top: 493px;
+    display: flex;
+    justify-content: center;
+}
+.rec-btn {
+    position: absolute;
+    width: 210px;
+    height: 45px;
+    left: 67px;
+    top: 440px;
+    display: flex;
+    justify-content: center;
+}
+.down {
+    border-style: none;
+    border:0px;
+    font-size: 16px;
+    color:white;
+    background-color: #2ab54a;
+    border-radius: 17px;
+    width: 170px;
+    cursor: pointer;
+    
+}
+.rec {
+    border-style: none;
+    border:0px;
+    font-size: 16px;
+    color:white;
+    background-color: #df2f2f;
+    border-radius: 17px;
+    width: 170px;
+    cursor: pointer;
+}
+.rec:hover {
+
+    background-color: #c51414;
+    transition: ease-in-out 0.2s;
+}
+.down:hover {
+
+    background-color: #1ba43b;
+    transition: ease-in-out 0.2s;
+}

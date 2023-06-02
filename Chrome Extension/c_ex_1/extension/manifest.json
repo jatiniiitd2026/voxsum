@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Voxsum",
+  "version": "1.0",
+  "description": "Smart Summarizer",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icon": {
+    "128": "logo_main.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Extension Title"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html"
+}
